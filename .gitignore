@@ -123,3 +123,7 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+
+# Added by Stephen William
+.DS_Store
