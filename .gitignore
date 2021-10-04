@@ -1,3 +1,10 @@
+
+
+# Added by Stephen William
+.DS_Store
+
+
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -125,5 +132,3 @@ dmypy.json
 .pyre/
 
 
-# Added by Stephen William
-.DS_Store
