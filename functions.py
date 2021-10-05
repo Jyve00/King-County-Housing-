@@ -1,30 +1,19 @@
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-import seaborn as sns
-import matplotlib.pyplot as plt
+from sklearn.metrics import r2_score, mean_absolute_error, mean_squared_error
 
+def evaluate(y_tr, tr_preds, y_te, te_preds):
+    """
 
-
-
-df = pd.read_csv('Data/kc_house_data.csv')
-
-# Count number of Null values 
-#print(data.isna().sum())
-# waterfront contains 2376 nulls
-# view contains 63 nulls
-# yr_renovated contains 3842 nulls
-
-# Replace NaN values with Yes
-df['waterfront'] = df['waterfront'].fillna('YES')
-# Replace NaN values with 'Not rated'
-df['view'] = df['view'].fillna('not rated')
-
-
-# declaring X and Y values
-
-x = df['price']
-y = df['grade']
-
-plt.bar(x, y)
-plt.show()
+    :param y_tr: Values for 'price' in training dataset
+    :param tr_preds: Predicted values for 'price' in training dataset
+    :param y_te: Values for 'price' in test dataset
+    :param te_preds: Predicted values for 'price' in test dataset
+    :return: None
+    """
+    print(f"Train R2: {r2_score(y_tr, tr_preds):.4f}")
+    print(f"Test R2: {r2_score(y_te, te_preds):.4f}")
+    print("****")
+    print(f"Train RMSE: ${mean_squared_error(y_tr, tr_preds, squared=False):,.2f}")
+    print(f"Test RMSE: ${mean_squared_error(y_te, te_preds, squared=False):,.2f}")
+    print("****")
+    print(f"Train MAE: ${mean_absolute_error(y_tr, tr_preds):,.2f}")
+    print(f"Test MAE: ${mean_absolute_error(y_te, te_preds):,.2f}")
