@@ -1,6 +1,6 @@
-<<<<<<< HEAD
+#<<<<<<< HEAD
 
-=======
+#=======
 from sklearn.metrics import r2_score, mean_absolute_error, mean_squared_error
 
 def evaluate(y_tr, tr_preds, y_te, te_preds):
@@ -20,4 +20,4 @@ def evaluate(y_tr, tr_preds, y_te, te_preds):
     print("****")
     print(f"Train MAE: ${mean_absolute_error(y_tr, tr_preds):,.2f}")
     print(f"Test MAE: ${mean_absolute_error(y_te, te_preds):,.2f}")
->>>>>>> main
+#>>>>>>> main
